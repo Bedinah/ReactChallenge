@@ -16,7 +16,7 @@ export default function Footer() {
   }, [value, navigate]);
 
   return (
-    <Box sx={{ width: 1000 }}>
+    <Box sx={{ width: "100%" }}>
       <BottomNavigation
         showLabels
         value={value}
@@ -25,12 +25,12 @@ export default function Footer() {
         }}
       >
         <BottomNavigationAction
-          style={{ color: "purple", fontSize: "13rem" }}
+          style={{ color: "black" }}
           label="HOME"
           icon={<HomeSharpIcon />}
         />
         <BottomNavigationAction
-          style={{ color: "purple", fontSize: "13rem" }}
+          style={{ color: "black", fontSize: "50rem" }}
           label="SEARCH"
           icon={<SearchIcon />}
         />

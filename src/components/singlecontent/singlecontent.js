@@ -19,11 +19,11 @@ const Singlecontent = ({
         color={vote_average > 7 ? "primary" : "secondary"}
       />
       <img src={poster ? `${img_300}/${poster}` : unavailable} alt={title} />
-      <b className=" tittle">{title}</b>
-      <span className="subtitle">
+      <h2 className=" tittle">{title}</h2>
+      <p className="subtitle">
         {media_type === "tv" ? "TV Series" : "Movie"}
-      </span>
-      <span className=" subtitle">{date}</span>
+      </p>
+      <p className=" subtitle">{date}</p>
     </DetailPage>
   );
 };

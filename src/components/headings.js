@@ -4,10 +4,12 @@ import "./headings.css";
 
 const Headings = () => {
   return (
-    <div className="heading">
-      <h1 className="title" onClick={() => window.scroll(0, 0)}>
-        <span>t</span>rending <span>m</span>ovies
-      </h1>
+    <div class="fixed-top">
+      <div className="heading">
+        <h2 className="title" onClick={() => window.scroll(0, 0)}>
+          <span>t</span>rending <span>m</span>ovies
+        </h2>
+      </div>
     </div>
   );
 };

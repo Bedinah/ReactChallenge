@@ -1,10 +1,10 @@
 .media{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 25rem;
     padding: 5px 0;
-    background-color: #282c34;
-    border-radius: 18px;
+    background-color: #6b5b95;
+    border-radius: 1.5rem;
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
@@ -12,21 +12,23 @@
     background-color: white;
     color: black;
 }
-
 .poster{
-    border-radius: 18px;
+    border-radius: 1.5rem;
 }
 .tittle{
+    text-transform: uppercase;
     width: 100%;
     text-align: center;
-    font-size: 17px;
-    padding: 8px 0;
+    font-size: 1.8rem;
+    padding: .8rem 0;
 }
 .subtitle{
     display: flex;
+    font-size: 1.5rem;
     justify-content: space-between;
-    padding: 0 2px;
-    padding-bottom:3px ;
+    padding: 0 .2rem;
+    padding-bottom:.2rem ;
+    
 }
 
 @media(max-width:550px){
