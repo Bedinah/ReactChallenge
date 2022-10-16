@@ -1,12 +1,12 @@
 import React from "react";
+
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Singlecontent from "../components/singlecontent/singlecontent";
 import "./homepge.css";
-import CustomPaginaton from "../components/paginaton";
+import AddMovieForm from "../components/addMovieForm";
 
 const Homepage = () => {
-  const [page, setPage] = useState(1);
   const [Content, setContent] = useState([]);
 
   const fetchHomepage = async () => {
@@ -25,6 +25,7 @@ const Homepage = () => {
   return (
     <div>
       <span className="pageTitle">Trending</span>
+      <AddMovieForm />
       <div className="movies">
         {Content &&
           Content.map((c) => (
@@ -39,7 +40,7 @@ const Homepage = () => {
             />
           ))}
       </div>
-      <CustomPaginaton />
+      
     </div>
   );
 };

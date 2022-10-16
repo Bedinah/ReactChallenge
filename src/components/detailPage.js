@@ -105,6 +105,7 @@ export default function DetailPage({ children, media_type, id }) {
                   <span className="contentDescription">{Content.overview}</span>
                 </div>
               </div>
+              
             </Box>
           )}
         </Fade>

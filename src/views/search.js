@@ -11,12 +11,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 import Singlecontent from "../components/singlecontent/singlecontent";
 
+
 const Search = () => {
   const [type, setType] = useState(0);
   const [page, setPage] = useState(1);
   const [searchText, setSearchText] = useState("");
   const [Content, setContent] = useState();
-  const [numOfPages, setNumOfPages] = useState();
+  
 
   const darkTheme = createMuiTheme({
     palete: {
@@ -26,7 +27,7 @@ const Search = () => {
       },
     },
   });
-  const fetchSearch = async () => {
+  const fetchSearch = async () =>{
     const { data } = await axios.get(
       `
       https://api.themoviedb.org/3/search/${
@@ -35,7 +36,6 @@ const Search = () => {
     );
 
     setContent(data.results);
-    setNumOfPages(data.total_pages);
   };
   useEffect(() => {
     window.scroll(0, 0);
