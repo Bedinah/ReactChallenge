@@ -8,7 +8,7 @@ const AddMovieForm = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h4 style={{ fontSize: "2rem" }}>Add a movie</h4>
+      <span><h4 style={{ fontSize: "2rem" }}>Add a movie</h4></span>
       <Formik
         initialValues={{ name: "type here" }}
         onSubmit={(values, actions) => {

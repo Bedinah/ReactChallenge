@@ -29,14 +29,14 @@ const Singlecontent = ({
       <h2 className=" tittle">{title}</h2>
       <p className="subtitle">{media_type === "tv" ? "TV Series" : "Movie"}</p>
       <p className=" subtitle">{date}</p>
-      <button
+      {/* <button
         onClick={handleDeleteClick}
         style={{ margin: "2rem 7rem", padding: "1rem", backgroundColor: "red" }}
         type="button"
         class="btn btn-danger"
       >
         Delete
-      </button>
+      </button> */}
     </DetailPage>
   );
 };
