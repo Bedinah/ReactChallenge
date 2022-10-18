@@ -27,12 +27,39 @@
     font-size: 1.5rem;
     justify-content: space-between;
     padding: 0 .2rem;
-    padding-bottom:.2rem ;
-    
+    padding-bottom:.2rem ;   
 }
-
+@media(max-width:1232px){
+    .media{
+        display: flex;
+        /* width: 30%; */
+    }
+    }
+@media(max-width:970px){
+    .media{
+            display: flex;
+            width: 43%;
+        }
+        } 
+@media(max-width:770px){
+            .media{
+                    display: flex;
+                    width: 48%;
+                    gap:2rem;
+                }
+                } 
+@media(max-width:670px){
+   .media{
+        display: flex;
+        width: 45%;
+        }}
+        @media(max-width:652px){
+            .media{
+                 display: flex;
+                 width: 48%;
+                 } }                       
 @media(max-width:550px){
 .media{
-    width: 46%;
+    width: 100%;
 }
 }

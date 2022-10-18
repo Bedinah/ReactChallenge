@@ -18,3 +18,10 @@
         font-size: 5rem;
     }
 }
+@media(max-width:450px){
+    .movies{
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+       }}
+
