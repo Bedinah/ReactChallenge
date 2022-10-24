@@ -1,44 +1,19 @@
 import React, { useState } from "react";
-import { Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { addMovie } from "../redux/movieList";
 
 const AddMovieForm = () => {
-  // const [value, setValue] = useState();
+  const [title, setTitle] = useState("");
   const dispatch = useDispatch();
+  const save = () => {
+    dispatch({ type: "ADD_MOVIE", payload: { title: title } });
+  };
   return (
     <div>
-      <span><h4 style={{ fontSize: "2rem" }}>Add a movie</h4></span>
-      <Formik
-        initialValues={{ name: "type here" }}
-        onSubmit={(values, actions) => {
-          dispatch(
-            addMovie({
-              title: values,
-            })
-          );
+      <input onChange={(e) => setTitle(e.target.value)} />
 
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
-          }, 1000);
-        }}
-      >
-        {(props) => (
-          <form onSubmit={props.handleSubmit}>
-            <input
-              type="text"
-              onChange={props.handleChange}
-              onBlur={props.handleBlur}
-              value={props.values.name}
-              name="name"
-            />
-            {props.errors.name && <div id="feedback">{props.errors.name}</div>}
-            <button type="submit">Submit</button>
-          </form>
-        )}
-      </Formik>
+      <button onClick={save}>SAVE</button>
     </div>
   );
 };
+
 export default AddMovieForm;

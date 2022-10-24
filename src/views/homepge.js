@@ -1,20 +1,22 @@
 import React from "react";
-
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Singlecontent from "../components/singlecontent/singlecontent";
 import "./homepge.css";
 import AddMovieForm from "../components/addMovieForm";
+import { useDispatch, useSelector } from "react-redux";
 
 const Homepage = () => {
-  const [Content, setContent] = useState([]);
+  // const [Content, setContent] = useState([]);
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.movies);
 
   const fetchHomepage = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}`
     );
-
-    setContent(data.results);
+    dispatch({ type: "GET_MOVIES", payload: data.results });
+    // setContent(data.results);
   };
 
   useEffect(() => {
@@ -27,8 +29,8 @@ const Homepage = () => {
       <span className="pageTitle">Trending</span>
       <AddMovieForm />
       <div className="movies">
-        {Content &&
-          Content.map((c) => (
+        {movies &&
+          movies.map((c) => (
             <Singlecontent
               key={c.id}
               id={c.id}
@@ -40,7 +42,6 @@ const Homepage = () => {
             />
           ))}
       </div>
-      
     </div>
   );
 };
