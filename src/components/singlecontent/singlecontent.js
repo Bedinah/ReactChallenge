@@ -40,14 +40,15 @@ const Singlecontent = ({
         <button
           onClick={handleDeleteClick}
           style={{
-            padding: "1rem , 3rem",
+            padding: "1.3rem 3rem",
+            
             backgroundColor: "aliceblue",
             borderRadius: "1.5rem",
           }}
           type="button"
           class="btn btn-danger"
         >
-          DELETE
+         <b>DELETE</b> 
         </button>
       </div>
     </>
