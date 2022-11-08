@@ -2,8 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Singlecontent from "../components/singlecontent/singlecontent";
+import BasicModal from "../components/modal";
 import "./homepge.css";
-import AddMovieForm from "../components/addMovieForm";
+import AddMovie from "../components/addMovie";
 import { useDispatch, useSelector } from "react-redux";
 
 const Homepage = () => {
@@ -27,7 +28,8 @@ const Homepage = () => {
   return (
     <div>
       <span className="pageTitle">Trending</span>
-      <AddMovieForm />
+      {/* <AddMovie /> */}
+      <BasicModal />
       <div className="movies">
         {movies &&
           movies.map((c) => (
